@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你怎么死下了</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .tombstone {
+            position: relative;
+            width: 300px;
+            height: 400px;
+        }
+        
+        .tombstone-body {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 250px;
+            background: #666;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            z-index: 10;
+        }
+        
+        .tombstone-top {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 15px;
+            background: #555;
+            border-radius: 3px 3px 0 0;
+        }
+        
+        .gif-display {
+            width: 140px;
+            height: 140px;
+            background-color: #000;
+            border: 2px solid #333;
+            margin-top: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .gif-display img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        .name-plate {
+            background: #5D4037;
+            color: #FFD700;
+            padding: 8px 15px;
+            border-radius: 3px;
+            margin-top: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .grave-mound {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 250px;
+            height: 180px;
+            background: #4E342E;
+            border-radius: 50% 50% 0 0;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+    <div class="tombstone">
+        <div class="tombstone-top"></div>
+        <div class="tombstone-body">
+            <div class="gif-display">
+                <img src="https://media.giphy.com/media/3o7TKsQ8UQ4l4LhGz6/giphy" alt="恶搞GIF">
+            </div>
+            <div class="name-plate">死下了</div>
+        </div>
+        <div class="grave-mound"></div>
+    </div>
+</body>
+</html>
